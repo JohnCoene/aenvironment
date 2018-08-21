@@ -1,0 +1,30 @@
+# aenvironment
+
+Easily add VR environments to aframer, includes the [dependency](https://github.com/feiss/aframe-environment-component) and the `a_environment` tag.
+
+## Installation
+
+You can install the released version of aenvironment from [CRAN](https://CRAN.R-project.org) with:
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("JohnCoene/aenvironment")
+```
+
+## Example
+
+```{r}
+library(aframer)
+library(aenvironment)
+
+embed_aframe(
+  a_scene(
+    a_environment(
+      environment = aframer::opts_aframe(
+        preset = "forest"
+      )
+    )
+  )
+)
+```
+
