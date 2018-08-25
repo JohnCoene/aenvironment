@@ -2,9 +2,15 @@
 % Please edit documentation in R/tag.R
 \name{a_environment}
 \alias{a_environment}
+\alias{aenvironment_dependency}
+\alias{aenvironment_dep}
 \title{Environment}
 \usage{
-a_environment(..., version = "0.8.2", cdn = FALSE)
+a_environment(...)
+
+aenvironment_dependency(version = "0.8.2", cdn = FALSE)
+
+aenvironment_dep(version = "0.8.2", cdn = FALSE)
 }
 \arguments{
 \item{...}{any \code{aframer} components.}
@@ -16,11 +22,16 @@ a_environment(..., version = "0.8.2", cdn = FALSE)
 \description{
 Add environment
 }
+\note{
+Source \code{a_dependency} \emph{before} \code{aenvironment_dependency}.
+}
 \examples{
 library(aframer)
 
 browse_aframe(
   a_scene(
+    a_dependency(),
+    aenvironment_dependency(),
     a_environment(
       environment = aframer::opts_aframe(
         preset = "forest"

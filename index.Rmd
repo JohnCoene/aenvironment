@@ -19,6 +19,8 @@ library(aenvironment)
 
 embed_aframe(
   a_scene(
+    a_dependency(),
+    aenvironment_dependency(),
     a_environment(
       environment = aframer::opts_aframe(
         preset = "forest"

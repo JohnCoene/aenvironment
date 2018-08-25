@@ -11,6 +11,8 @@
 #'
 #' browse_aframe(
 #'   a_scene(
+#'     a_dependency(),
+#'     aenvironment_dependency(),
 #'     a_environment(
 #'       environment = aframer::opts_aframe(
 #'         preset = "forest"
@@ -19,15 +21,27 @@
 #'   )
 #' )
 #'
+#' @note Source \code{a_dependency} \emph{before} \code{aenvironment_dependency}.
+#'
 #' @seealso \href{https://github.com/feiss/aframe-environment-component}{official documentation}.
 #'
+#' @rdname environment
 #' @export
-a_environment <- function(..., version = "0.8.2", cdn = FALSE){
-  dep <- .get_dependency(
+a_environment <- function(...){
+
+  aframer::a_entity(...)
+}
+
+#' @rdname environment
+#' @export
+aenvironment_dependency <- function(version = "0.8.2", cdn = FALSE){
+  .get_dependency(
     "aframe-environment-component.min.js",
     "0.0.1",
     cdn
   )
-
-  aframer::a_entity(..., aframer::a_dependency(), dep)
 }
+
+#' @rdname environment
+#' @export
+aenvironment_dep <- aenvironment_dependency

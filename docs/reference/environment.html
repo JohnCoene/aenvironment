@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • aenvironment</title>
+<title>Environment — a_environment • aenvironment</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -32,7 +32,10 @@
 
   <link href="../extra.css" rel="stylesheet">
   
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Environment — a_environment" />
+
+<meta property="og:description" content="Add environment" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -58,7 +61,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -114,42 +117,78 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Environment</h1>
+    
+    <div class="hidden name"><code>environment.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Add environment</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>a_environment</span>(<span class='no'>...</span>)
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="environment.html">a_environment()</a></code> <code><a href="environment.html">aenvironment_dependency()</a></code> <code><a href="environment.html">aenvironment_dep()</a></code> </p>
-        </td>
-        <td><p>Environment</p></td>
-      </tr>
-    </tbody>
+<span class='fu'>aenvironment_dependency</span>(<span class='kw'>version</span> <span class='kw'>=</span> <span class='st'>"0.8.2"</span>, <span class='kw'>cdn</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+
+<span class='fu'>aenvironment_dep</span>(<span class='kw'>version</span> <span class='kw'>=</span> <span class='st'>"0.8.2"</span>, <span class='kw'>cdn</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>...</th>
+      <td><p>any <code>aframer</code> components.</p></td>
+    </tr>
+    <tr>
+      <th>version</th>
+      <td><p>Version to pass to <a href='http://www.rdocumentation.org/packages/aframer/topics/scene'>a_scene</a>.</p></td>
+    </tr>
+    <tr>
+      <th>cdn</th>
+      <td><p>Wether to use local of CDN for source files.</p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
+    <p>Source <code>a_dependency</code> <em>before</em> <code>aenvironment_dependency</code>.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><a href='https://github.com/feiss/aframe-environment-component'>official documentation</a>.</p></div>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>aframer</span>)
+
+<span class='fu'><a href='http://www.rdocumentation.org/packages/aframer/topics/view'>browse_aframe</a></span>(
+  <span class='fu'><a href='http://www.rdocumentation.org/packages/aframer/topics/scene'>a_scene</a></span>(
+    <span class='fu'><a href='http://www.rdocumentation.org/packages/aframer/topics/scene'>a_dependency</a></span>(),
+    <span class='fu'>aenvironment_dependency</span>(),
+    <span class='fu'>a_environment</span>(
+      <span class='kw'>environment</span> <span class='kw'>=</span> <span class='kw pkg'>aframer</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/aframer/topics/options'>opts_aframe</a></span>(
+        <span class='kw'>preset</span> <span class='kw'>=</span> <span class='st'>"forest"</span>
+      )
+    )
+  )
+)</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#note">Note</a></li>
+
+      <li><a href="#see-also">See also</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
