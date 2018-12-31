@@ -10,4 +10,7 @@ Imports: htmltools, aframer
 URL: http://aenvironment.john-coene.com/
 BugReports: https://github.com/JohnCoene/aenvironment/issues
 Remotes: JohnCoene/aframer
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown

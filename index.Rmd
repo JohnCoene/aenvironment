@@ -1,6 +1,27 @@
 # aenvironment
 
-Easily add VR environments to aframer, includes the [dependency](https://github.com/feiss/aframe-environment-component) and the `a_environment` tag.
+```{r, eval=TRUE, include=FALSE}
+library(htmltools)
+```
+
+```{r, echo=FALSE}
+div(
+  class = "row",
+  div(
+    class = "col-md-3",
+    img(src = "logo.png")
+  ),
+  div(
+    class = "col-md-9",
+    "Environments for",
+    tags$a(
+      href = "https://aframer.john-coene.com",
+      target = "_blank",
+      "aframer"
+    )
+  )
+)
+```
 
 ## Installation
 
@@ -10,6 +31,29 @@ You can install the released version of aenvironment from [CRAN](https://CRAN.R-
 # install.packages("devtools")
 devtools::install_github("JohnCoene/aenvironment")
 ```
+
+## Presets
+
+18 built-in presets.
+
+- `none`
+- `default`
+- `contact`
+- `egypt`
+- `checkerboard`
+- `forest`
+- `goaland`
+- `yavapai`
+- `goldmine`
+- `threetowers`
+- `poison`
+- `arches`
+- `tron`
+- `japan`
+- `dream`
+- `volcano`
+- `starry`
+- `osiris`
 
 ## Example
 
